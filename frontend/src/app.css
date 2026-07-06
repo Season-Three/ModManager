@@ -1,0 +1,213 @@
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 18px;
+    border-bottom: 1px solid var(--border);
+    background: var(--card);
+    flex-shrink: 0;
+}
+
+.topbar h1 {
+    font-family: var(--font-display);
+    font-size: 15px;
+    font-weight: 600;
+    margin: 0;
+    color: var(--text);
+}
+
+.status-badge {
+    font-family: var(--font-mono);
+    font-size: 11.5px;
+    color: var(--text-dim);
+    background: var(--panel);
+    border-radius: 999px;
+    padding: 4px 10px;
+}
+
+.status-badge strong {
+    font-weight: 700;
+    color: var(--text);
+}
+
+.notice {
+    display: flex;
+    align-items: center;
+    margin: 12px 18px 12px;
+    padding: 9px 12px;
+    background: var(--notice-bg);
+    border-radius: var(--radius-sm);
+    color: var(--notice-text);
+    font-size: 12.5px;
+    text-align: left;
+    flex-shrink: 0;
+}
+
+.notice-icon {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 6px;
+    color: var(--notice-text);
+}
+
+.notice-icon svg {
+    width: 19px;
+    height: 19px;
+    vertical-align: -2px;
+}
+
+.card-list {
+    flex: 1;
+    overflow-y: auto;
+    padding: 0 18px 18px;
+}
+
+.card-list::-webkit-scrollbar {
+    width: 10px;
+}
+
+.card-list::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.card-list::-webkit-scrollbar-thumb {
+    background: var(--off);
+    border-radius: 5px;
+    border: 2px solid var(--bg);
+}
+
+.card-list::-webkit-scrollbar-thumb:hover {
+    background: var(--text-dim);
+}
+
+.card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    margin-bottom: 8px;
+}
+
+.card-top {
+    display: flex;
+    align-items: center;
+    padding: 12px 14px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.card-arrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-dim);
+    width: 16px;
+    flex-shrink: 0;
+    transition: transform 0.15s ease;
+}
+
+.card-arrow svg {
+    width: 12px;
+    height: 12px;
+}
+
+.card.expanded .card-arrow {
+    transform: rotate(90deg);
+}
+
+.card-name {
+    font-family: var(--font-display);
+    font-size: 13.5px;
+    font-weight: 600;
+    color: var(--text);
+    flex: 1;
+    text-align: left;
+    margin-left: 2px;
+}
+
+.card-desc {
+    font-family: var(--font-body);
+    font-size: 12px;
+    color: var(--text-dim);
+    text-align: left;
+    padding: 0 14px 12px 32px;
+    line-height: 1.45;
+}
+
+.card-detail {
+    display: none;
+    background: var(--panel);
+    border-top: 1px solid var(--border);
+    border-radius: 0 0 var(--radius) var(--radius);
+    padding: 8px 0;
+}
+
+.card.expanded .card-detail {
+    display: block;
+}
+
+.mod-row {
+    display: flex;
+    align-items: center;
+    padding: 3px 14px 3px 32px;
+    font-size: 12px;
+}
+
+.mod-dot {
+    color: var(--off);
+    margin-right: 8px;
+    font-size: 8px;
+}
+
+.mod-dot.on {
+    color: var(--on);
+}
+
+.mod-name {
+    color: var(--text);
+}
+
+.mod-name.missing {
+    color: var(--text-dim);
+}
+
+/* toggle switch */
+.switch {
+    position: relative;
+    width: 38px;
+    height: 22px;
+    flex-shrink: 0;
+    background: var(--off);
+    border-radius: 11px;
+    cursor: pointer;
+    transition: background 0.15s ease;
+}
+
+.switch.on {
+    background: var(--on);
+}
+
+.switch-knob {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 18px;
+    height: 18px;
+    background: #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    transition: left 0.15s ease;
+}
+
+.switch.on .switch-knob {
+    left: 18px;
+}
+
+.footer {
+    flex-shrink: 0;
+    padding: 8px 0;
+    text-align: center;
+    font-size: 11px;
+    color: var(--text-dim);
+    border-top: 1px solid var(--border);
+    background: var(--card);
+}

@@ -1,0 +1,40 @@
+:root {
+    --bg: #f5f5f5;
+    --panel: #ececec;
+    --card: #ffffff;
+    --border: #e2e2e2;
+    --text: #1a1a1a;
+    --text-dim: #8c8c8c;
+    --on: #1a1a1a;
+    --on-dim: #4a4a4a;
+    --off: #d4d4d4;
+    --notice-bg: #ececec;
+    --notice-text: #4a4a4a;
+
+    --font-display: "Segoe UI", "Microsoft YaHei", sans-serif;
+    --font-body: "Microsoft YaHei", "Segoe UI", sans-serif;
+    --font-mono: "Consolas", "Cascadia Mono", monospace;
+
+    --radius: 14px;
+    --radius-sm: 8px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    height: 100%;
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+}

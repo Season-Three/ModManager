@@ -1,0 +1,11 @@
+build/bin
+node_modules
+frontend/dist
+frontend/wailsjs
+
+/mods
+/modmanager.exe
+
+.DS_Store
+Thumbs.db
+*.log
